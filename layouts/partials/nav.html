@@ -1,0 +1,18 @@
+<header>
+  <h1 class="header-brand">
+    <a href="/" title="{{ .Site.Title }}">{{ .Site.Params.brand }}</a>
+  </h1>
+  <nav class="header-nav">
+    <ul>
+      {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <li class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}is-selected{{end}}">
+            <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+      <!-- <li class="is-selected"><a href="/index.html">About</a></li>
+      <li><a href="/works.html">Works</a></li>
+      <li><a href="/contact.html">Contact</a></li> -->
+    </ul>
+  </nav>
+</header>
