@@ -1,8 +1,0 @@
-baseURL = "http://sebastian-vazquez.com.ar/"
-languageCode = "en-us"
-title = "Sebastian Vazquez"
-sectionPagesMenu = "main"
-[params]
-  Brand = "SV"
-  Subtitle = "Producer"
-  Description = "Experienced producer in animation and videogames industries. From Buenos Aires, Argentina, now based in Toronto, ON."
