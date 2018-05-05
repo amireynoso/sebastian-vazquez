@@ -4,9 +4,9 @@ layout: work
 company: peppermelon
 slug: ceska
 videos: 
-  - https://player.vimeo.com/video/189355990
   - https://player.vimeo.com/video/189354807
   - https://player.vimeo.com/video/189356185
+  - https://player.vimeo.com/video/189355990
 ---
 
 Ceska was one of our biggest clients. With them, we worked on over 13 TV spots, 50 full sized 3D prints, and other marketing materials. 

@@ -48,7 +48,6 @@ body {
   line-height: 1.4;
   position: relative;
   min-height: 100%;
-  width: 100%;
   padding: 2rem; }
 
 header {
@@ -122,6 +121,9 @@ a {
   background-color: #C7F464;
   bottom: -0.25rem; }
 
+.content-description + .content-description {
+  margin-top: 4rem; }
+
 .content-description a {
   color: #4ECDC4; }
   .content-description a:hover {
@@ -155,10 +157,15 @@ a {
   .works-back:hover {
     color: #FF6B6B; }
 
+.works-item {
+  display: block;
+  margin-bottom: 0.8rem; }
+
 @media (min-width: 940px) {
   body {
     padding: 0;
-    display: table; }
+    display: table;
+    width: 100%; }
 
   header {
     position: absolute;

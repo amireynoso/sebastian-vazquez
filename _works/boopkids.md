@@ -3,8 +3,6 @@ title: Boop KIDS
 layout: work
 company: lemonchili
 slug: boopkids
-videos: 
-  - https://player.vimeo.com/video/189355990
 ---
 
 *TBA*

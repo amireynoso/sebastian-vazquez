@@ -20,7 +20,6 @@ body {
   line-height: 1.4;
   position: relative;
   min-height: 100%;
-  width: 100%;
   padding: 2rem;
 }
 
@@ -111,6 +110,10 @@ a {
   bottom: -0.25rem;
 }
 
+.content-description + .content-description {
+  margin-top: 4rem;
+}
+
 .content-description a {
   color: $palette-3;
 
@@ -156,10 +159,16 @@ a {
   }
 }
 
+.works-item {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
 @media (min-width: 940px) {
   body {
     padding: 0;
     display: table;
+    width: 100%;
   }
 
   header {
