@@ -33,6 +33,56 @@ footer, header, hgroup, menu, nav, section {
 ol, ul {
   list-style: none; }
 
+/**
+* (optional) define here the style definitions which should be applied on the slider container
+* e.g. width including further controls like arrows etc.
+*/
+.slider {
+  width: 100%;
+  max-width: 700px;
+  position: relative; }
+
+.frame {
+  /**
+  * (optional) wrapper width, specifies width of the slider frame.
+  */
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.slides {
+  display: inline-block; }
+  .slides li {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    /**
+    * (optional) if the content inside the slide element has a defined size.
+    */
+    width: 100%; }
+    .slides li img {
+      max-width: 100%; }
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  display: block;
+  cursor: pointer; }
+
+.next {
+  right: 0; }
+
+.prev {
+  left: 0; }
+
+.next svg, .prev svg {
+  width: 25px; }
+
 /*
   STRUCTURE
 */
@@ -59,6 +109,9 @@ a {
   text-decoration: none;
   color: inherit;
   transition: color 150ms ease; }
+
+strong {
+  font-weight: 600; }
 
 /*
   HEADER
@@ -97,12 +150,12 @@ a {
   margin-bottom: 2rem;
   font-weight: 400; }
 
-.content span {
+.content-highlight {
   position: relative;
   font-weight: 400;
   color: #556270; }
 
-.content span:after {
+.content-highlight:after {
   content: '';
   display: block;
   width: 100%;
@@ -114,9 +167,15 @@ a {
 
 .content-lead span {
   font-weight: 600;
-  color: #4ECDC4; }
+  color: #4ECDC4;
+  position: relative; }
 
 .content-lead span:after {
+  content: '';
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
   height: 0.25rem;
   background-color: #C7F464;
   bottom: -0.25rem; }
@@ -129,13 +188,26 @@ a {
   .content-description a:hover {
     color: #C7F464; }
 
+a.content-button {
+  border: 0.2rem #C7F464 solid;
+  color: #556270;
+  background: #fff;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600; }
+  a.content-button:hover {
+    color: #4ECDC4; }
+
 /*
   INTRO SECTION
 */
-.intro-photo {
-  margin: 1rem auto; }
+.intro-info {
+  margin: 1rem auto;
+  text-align: center; }
 
-.intro-photo img {
+.intro-info img {
   max-width: 250px;
   border-radius: 50%; }
 
@@ -160,6 +232,14 @@ a {
 .works-item {
   display: block;
   margin-bottom: 0.8rem; }
+
+.works-subtitle {
+  color: #FF6B6B;
+  font-weight: 400;
+  margin: 1rem 0; }
+
+.works-still {
+  max-width: 100%; }
 
 @media (min-width: 940px) {
   body {
@@ -196,10 +276,10 @@ a {
   .intro .content-description {
     display: table-cell; }
 
-  .intro-photo {
+  .intro-info {
     padding-right: 2rem;
     display: table-cell;
     vertical-align: middle; }
 
-  .intro-photo img {
+  .intro-info img {
     max-width: 300px; } }

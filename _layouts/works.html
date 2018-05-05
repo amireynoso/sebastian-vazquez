@@ -9,7 +9,7 @@ layout: default
   <h2 class="content-lead">These are works for <span>LemonChili</span>.</h2>
   {% for work in lemonchili %}
     <a class="works-item" href="{{ work.url }}">
-      <!-- <img src="{{ work.slug | prepend: '/assets/images/works/' | append: '.png' | relative_url }}" alt="{{ work.title }}"> -->
+      <!-- <img src="{{ work.slug | prepend: '/assets/images/works/' | append: '.jpg' | relative_url }}" alt="{{ work.title }}"> -->
       <span>{{ work.title }}</span>
     </a>
   {% endfor %}
@@ -19,7 +19,7 @@ layout: default
   <h2 class="content-lead">These are works for <span>Peppermelon</span>.</h2>
   {% for work in peppermelon %}
     <a class="works-item" href="{{ work.url }}">
-      <!-- <img src="{{ work.slug | prepend: '/assets/images/works/' | append: '.png' | relative_url }}" alt="{{ work.title }}"> -->
+      <!-- <img src="{{ work.slug | prepend: '/assets/images/works/' | append: '.jpg' | relative_url }}" alt="{{ work.title }}"> -->
       <span>{{ work.title }}</span>
     </a>
   {% endfor %}

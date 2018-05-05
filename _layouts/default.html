@@ -11,6 +11,23 @@
       {{ content }}
     </main>
 
+    
+    {% if page.layout == 'work' %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.4.4/lory.min.js"></script>
+    <script>
+        'use strict';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var slider = document.querySelector('.js_slider');
+            if (slider && lory) {
+              lory(slider, {
+                rewind: true,
+              });
+            }
+        });
+    </script>
+    {% endif %}
+
   </body>
 
 </html>
