@@ -1,0 +1,22 @@
+{%- assign default_paths = site.pages | sort: 'order' | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+<header>
+  <h1 class="header-brand">
+    <a rel="author" title="{{ site.title | escape }}" href="{{ "/" | relative_url }}">{{ site.brand | escape }}</a>
+  </h1>
+  <nav class="header-nav">
+    <ul>
+      {%- for path in page_paths  -%}
+        {%- assign node = site.pages | where: "path", path | first -%}
+        {%- if node.title -%}
+          <li class="{% if page.url == node.url %}is-selected{% endif %}">
+              <a href="{{ node.url | relative_url }}">{{ node.title | escape }}</a>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+      <!-- <li class="is-selected"><a href="/index.html">About</a></li>
+      <li><a href="/works.html">Works</a></li>
+      <li><a href="/contact.html">Contact</a></li> -->
+    </ul>
+  </nav>
+</header>

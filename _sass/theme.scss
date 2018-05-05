@@ -1,41 +1,7 @@
-/* 
-  RESET
+@charset "utf-8";
 
-  http://meyerweb.com/eric/tools/css/reset/ 
-  v2.0 | 20110126
-  License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-
-ol, ul {
-	list-style: none;
-}
+@import "reset";
+@import "variables";
 
 /*
   STRUCTURE
@@ -48,12 +14,13 @@ html {
 
 body {
   background-color: #fff;
-  color: #444;
+  color: $palette-text;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.6rem;
   line-height: 1.4;
   position: relative;
   min-height: 100%;
+  width: 100%;
   padding: 2rem;
 }
 
@@ -66,6 +33,7 @@ header {
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 150ms ease;
 }
 
 /*
@@ -75,7 +43,7 @@ a {
 .header-brand {
   font-size: 4rem;
   font-family: 'Marck Script', cursive;
-  color: #FF6B6B;
+  color: $palette-1;
 }
 
 /*
@@ -84,20 +52,16 @@ a {
 
 .header-nav {
   text-transform: lowercase;
-  color: #556270;
+  color: $palette-4;
 }
 
 .header-nav .is-selected a {
-  color: #C7F464;
+  color: $palette-2;
   font-size: 2.4rem;
 }
 
-.header-nav a {
-  transition: color 150ms ease;
-}
-
 .header-nav a:hover {
-  color: #4ECDC4;
+  color: $palette-3;
 }
 
 /*
@@ -122,7 +86,7 @@ a {
 .content span {
   position: relative;
   font-weight: 400;
-  color: #556270;
+  color: $palette-4;
 }
 
 .content span:after {
@@ -131,20 +95,28 @@ a {
   width: 100%;
   height: 0.15rem;
   position: absolute;
-  background-color: #FF6B6B;
+  background-color: $palette-1;
   left: 0;
   bottom: -0.15rem;
 }
 
 .content-lead span {
   font-weight: 600;
-  color: #4ECDC4;
+  color: $palette-3;
 }
 
 .content-lead span:after {
   height: 0.25rem;
-  background-color: #C7F464;
+  background-color: $palette-2;
   bottom: -0.25rem;
+}
+
+.content-description a {
+  color: $palette-3;
+
+  &:hover {
+    color: $palette-2;
+  }
 }
 
 /*
@@ -160,9 +132,34 @@ a {
   border-radius: 50%;
 }
 
+/*
+  WORKS SECTION
+*/
+
+.works-back {
+  text-transform: lowercase;
+  color: $palette-4;
+  display: inline-block;
+  margin-top: 2rem;
+  
+  &:before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 0.2rem;
+    background-color: $palette-2;
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    color: $palette-1;
+  }
+}
+
 @media (min-width: 940px) {
   body {
     padding: 0;
+    display: table;
   }
 
   header {
@@ -170,6 +167,7 @@ a {
     right: 0;
     text-align: right;
     padding: 2rem;
+    width: 10rem;
   }
 
   .header-nav {
@@ -181,16 +179,19 @@ a {
   }
 
   main {
-    padding: 2rem;
-    max-width: 80%;
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
+    padding: 4rem 2rem;
+    display: table-cell;
+    vertical-align: middle;
   }
 
-  .intro {
-    display: table;
-    border-collapse: collapse;
+  .content-wrapper {
+    display: table-cell;
+  }
+
+  main:after {
+    content: '';
+    display: table-cell;
+    width: 10rem;
   }
 
   .intro .content-description {

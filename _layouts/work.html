@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="content-wrapper">
+  <h2 class="content-lead">Featured work: <span>{{ page.title }}</span></h2>
+
+  <section class="content-description">
+    {{ content }}
+  </section>
+  
+  {% assign images = site.static_files | where: 'image', true | where_exp: 'item', "item.path contains page.slug" %}
+  {% if images %}
+  <section class="works-images">
+    {% for image in images %}
+      <img src="{{ image.path }}" alt="{{ page.title }}">
+    {% endfor %}
+  </section>
+  {% endif %}
+  
+  {% if page.videos %}
+  <section class="works-video">
+    {% for video in page.videos %}
+      {% include video.html url=video %}
+    {% endfor %}
+  </section>
+  {% endif %}
+  
+  <a class="works-back" href="/works">See all works</a>
+</div>
