@@ -119,7 +119,7 @@ strong {
 .header-brand {
   font-size: 4rem;
   font-family: 'Marck Script', cursive;
-  color: #FF6B6B; }
+  color: #FF8D06; }
 
 /*
   NAVIGATION
@@ -129,7 +129,7 @@ strong {
   color: #556270; }
 
 .header-nav .is-selected a {
-  color: #C7F464;
+  color: #E5EF16;
   font-size: 2.4rem; }
 
 .header-nav a:hover {
@@ -161,7 +161,7 @@ strong {
   width: 100%;
   height: 0.15rem;
   position: absolute;
-  background-color: #FF6B6B;
+  background-color: #FF8D06;
   left: 0;
   bottom: -0.15rem; }
 
@@ -177,26 +177,27 @@ strong {
   position: absolute;
   left: 0;
   height: 0.25rem;
-  background-color: #C7F464;
+  background-color: #E5EF16;
   bottom: -0.25rem; }
 
 .content-description + .content-description {
   margin-top: 4rem; }
 
 .content-description a {
-  color: #4ECDC4; }
+  color: #FF8D06; }
   .content-description a:hover {
-    color: #C7F464; }
+    color: #4ECDC4; }
 
 a.content-button {
-  border: 0.2rem #C7F464 solid;
+  border: 0.2rem #E5EF16 solid;
   color: #556270;
   background: #fff;
   padding: 1rem 2rem;
   margin-top: 2rem;
   display: inline-block;
   font-size: 1.2rem;
-  font-weight: 600; }
+  font-weight: 600;
+  line-height: 1; }
   a.content-button:hover {
     color: #4ECDC4; }
 
@@ -211,6 +212,9 @@ a.content-button {
   max-width: 250px;
   border-radius: 50%; }
 
+@media (max-width: 939px) {
+  .intro-info {
+    order: 1; } }
 /*
   WORKS SECTION
 */
@@ -224,17 +228,17 @@ a.content-button {
     display: block;
     width: 2rem;
     height: 0.2rem;
-    background-color: #C7F464;
+    background-color: #E5EF16;
     margin-bottom: 1rem; }
   .works-back:hover {
-    color: #FF6B6B; }
+    color: #DE1E58; }
 
 .works-item {
   display: block;
   margin-bottom: 0.8rem; }
 
 .works-subtitle {
-  color: #FF6B6B;
+  color: #DE1E58;
   font-weight: 400;
   margin: 1rem 0; }
 

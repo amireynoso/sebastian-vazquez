@@ -11,7 +11,8 @@ order: 1
 </section>
 <section class="content-description">
   <h2 class="content-lead">Hi, I'm <span>Sebastian</span>.</h2>
-  <p>Experienced producer graduated as Image and Sound Designer from Universidad de Palermo, Buenos Aires, Argentina. I'm an ambitious and passionate professional, who’s fully dedicated to the audiovisual world and industry, from film to advertising, web and video games.</p>
-  <p>I study everyday of my life to have a broad set of skills, from technical aspects, to production, marketing and product development. My main goal is always focused on managing and delivering products or projects with the highest quality standards, whilst getting things done.</p>
-  <p>I have just moved to Toronto, Ontario, with an open work permit and am currently <span class="content-highlight">seeking for job opportunities</span>.</p>
+  <p>Experienced production coordinator from Buenos Aires, Argentina. Graduated as Image and Sound Designer from Universidad de Palermo.</p>
+  <p>I'm an ambitious and passionate professional, who’s fully dedicated to the audiovisual industry, from film to video games. I have a solid foundation on CGI, having learnt through formal education and by myself. This allows me to interact smoothly from a technical point of view in any production.</p>
+  <p>I study everyday of my life to have a broad set of skills, from technical aspects to production, marketing and product development. My main goal is always focused on managing and delivering products and projects with the highest quality standards, whilst getting things done.</p>
+  <p>I moved to Toronto, Ontario in May 2018, with an open work permit and am currently <span class="content-highlight">seeking for job opportunities</span>.</p>
 </section>
