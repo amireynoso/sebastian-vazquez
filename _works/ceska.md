@@ -7,6 +7,9 @@ slug: ceska
 videos: 
   - https://player.vimeo.com/video/189354807
   - https://player.vimeo.com/video/189356185
+  - https://www.youtube.com/embed/ycsPr2u_K5g
+  - https://www.youtube.com/embed/_5zRqq838rQ
+  - https://www.youtube.com/embed/Yg3px_bebX0
   - https://player.vimeo.com/video/189355990
 ---
 
