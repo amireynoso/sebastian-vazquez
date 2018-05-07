@@ -104,13 +104,13 @@ strong {
   bottom: -0.15rem;
 }
 
-.content-lead span {
+.content-lead strong {
   font-weight: 600;
   color: $palette-3;
   position: relative;
 }
 
-.content-lead span:after {
+.content-lead strong:after {
   content: '';
   display: block;
   width: 100%;

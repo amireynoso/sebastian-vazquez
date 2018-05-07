@@ -6,11 +6,11 @@ layout: default
 {% assign peppermelon = site.works | where: 'company', 'peppermelon' | sort: 'order' %}
 
 <section class="content-description">
-  <h2 class="content-lead">These are works for <span>LemonChili</span>.</h2>
+  <h2 class="content-lead">These are works for <strong>LemonChili</strong>.</h2>
   {% include collection.html company=lemonchili %}
 </section>
 
 <section class="content-description">
-  <h2 class="content-lead">These are works for <span>Peppermelon</span>.</h2>
+  <h2 class="content-lead">These are works for <strong>Peppermelon</strong>.</h2>
   {% include collection.html company=peppermelon %}
 </section>

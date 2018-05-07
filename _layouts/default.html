@@ -14,15 +14,25 @@
     {% if page.layout == 'work' %}
     <script src="https://cdn.jsdelivr.net/npm/halkabox@1.3.0/dist/halkaBox.min.js"></script>
     <script>
-        'use strict';
-
         document.addEventListener('DOMContentLoaded', function() {
           halkaBox.run('work-gallery', {
-              hideButtons: true,  // hide buttons on touch devices (true || false)
-              animation: 'slide', // animation type on next/prev ('slide' || 'fade')
-              theme: 'light',     // lightbox overlay theme ('light' || 'dark')
-              preload: 2          // number of images to preload
+              hideButtons: true,
+              animation: 'fade',
+              theme: 'light',
+              preload: 2
           });
+        });
+    </script>
+    {% endif %}
+
+    {% if page.class == 'intro' %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var age = document.querySelector('#age');
+          if (age) {
+            var birthday = +new Date('1991-10-03');
+            age.innerText = ~~((Date.now() - birthday) / (31557600000));
+          }
         });
     </script>
     {% endif %}

@@ -498,12 +498,12 @@ strong {
   left: 0;
   bottom: -0.15rem; }
 
-.content-lead span {
+.content-lead strong {
   font-weight: 600;
   color: #4ECDC4;
   position: relative; }
 
-.content-lead span:after {
+.content-lead strong:after {
   content: '';
   display: block;
   width: 100%;
