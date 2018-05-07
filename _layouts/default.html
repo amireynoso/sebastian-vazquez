@@ -12,17 +12,17 @@
     </main>
     
     {% if page.layout == 'work' %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.4.4/lory.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/halkabox@1.3.0/dist/halkaBox.min.js"></script>
     <script>
         'use strict';
 
         document.addEventListener('DOMContentLoaded', function() {
-            var slider = document.querySelector('.js_slider');
-            if (slider && lory) {
-              lory(slider, {
-                rewind: true,
-              });
-            }
+          halkaBox.run('work-gallery', {
+              hideButtons: true,  // hide buttons on touch devices (true || false)
+              animation: 'slide', // animation type on next/prev ('slide' || 'fade')
+              theme: 'light',     // lightbox overlay theme ('light' || 'dark')
+              preload: 2          // number of images to preload
+          });
         });
     </script>
     {% endif %}

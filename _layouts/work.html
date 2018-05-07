@@ -9,42 +9,22 @@ layout: default
     {{ content }}
   </section>
   
-  {% if page.videos %}
-  <section class="works-video">
-    <h3 class="works-subtitle">Videos</h3>
-    {% for video in page.videos %}
-      {% include video.html url=video %}
+  {% assign images = site.static_files | where: 'image', true | where_exp: 'item', 'item.path contains page.slug' | where_exp: 'item', 'item.path contains "stills"' %}
+  {% if images.size > 0 %}
+  <section class="works-images">
+    {% for image in images %}
+      <a href="{{ image.path }}" class="work-gallery" title="{{ page.title }}">
+        <img src="{{ image.path | replace: 'stills', 'thumbs' }}" alt="{{ page.title }}">
+      </a>
     {% endfor %}
   </section>
   {% endif %}
-
-  {% assign images = site.static_files | where: 'image', true | where_exp: 'item', "item.path contains page.slug" %}
-  {% if images.size > 0 %}
-  <section class="works-images">
-    <h3 class="works-subtitle">Still images and concept art</h3>
-    {% if images.size > 1 %}
-    <div class="slider js_slider">
-      <div class="frame js_frame">
-        <ul class="slides js_slides">
-          {% for image in images %}
-            <li class="js_slide">
-              <img src="{{ image.path }}" alt="{{ page.title }}">
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <span class="js_prev prev">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#ffffff" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg>
-      </span>
-      <span class="js_next next">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#ffffff" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg>
-      </span>
-    </div>
-    {% else %}
-      {% for image in images %}
-        <img class="works-still" src="{{ image.path }}" alt="{{ page.title }}">
-      {% endfor %}
-    {% endif %}
+  
+  {% if page.videos %}
+  <section class="works-videos">
+    {% for video in page.videos %}
+      {% include video.html url=video %}
+    {% endfor %}
   </section>
   {% endif %}
   

@@ -9,7 +9,7 @@
       {%- for path in page_paths  -%}
         {%- assign node = site.pages | where: "path", path | first -%}
         {%- if node.title -%}
-          <li class="{% if page.url == node.url %}is-selected{% endif %}">
+          <li class="{% if page.url == node.url or node.url contains page.layout %}is-selected{% endif %}">
               <a href="{{ node.url | relative_url }}">{{ node.title | escape }}</a>
           </li>
         {%- endif -%}

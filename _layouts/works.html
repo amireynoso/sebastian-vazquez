@@ -2,25 +2,15 @@
 layout: default
 ---
 
-{% assign lemonchili = site.works | where: 'company', 'lemonchili' %}
-{% assign peppermelon = site.works | where: 'company', 'peppermelon' %}
+{% assign lemonchili = site.works | where: 'company', 'lemonchili' | sort: 'order' %}
+{% assign peppermelon = site.works | where: 'company', 'peppermelon' | sort: 'order' %}
 
 <section class="content-description">
   <h2 class="content-lead">These are works for <span>LemonChili</span>.</h2>
-  {% for work in lemonchili %}
-    <a class="works-item" href="{{ work.url }}">
-      <!-- <img src="{{ work.slug | prepend: '/assets/images/works/' | append: '.jpg' | relative_url }}" alt="{{ work.title }}"> -->
-      <span>{{ work.title }}</span>
-    </a>
-  {% endfor %}
+  {% include collection.html company=lemonchili %}
 </section>
 
 <section class="content-description">
   <h2 class="content-lead">These are works for <span>Peppermelon</span>.</h2>
-  {% for work in peppermelon %}
-    <a class="works-item" href="{{ work.url }}">
-      <!-- <img src="{{ work.slug | prepend: '/assets/images/works/' | append: '.jpg' | relative_url }}" alt="{{ work.title }}"> -->
-      <span>{{ work.title }}</span>
-    </a>
-  {% endfor %}
+  {% include collection.html company=peppermelon %}
 </section>

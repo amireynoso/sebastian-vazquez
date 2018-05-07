@@ -1,0 +1,6 @@
+{% for work in include.company %}
+  <a class="works-item" href="{{ work.url }}">
+    <img src="{{ work.slug | prepend: '/assets/images/works/' | append: '/preview.jpg' | relative_url }}" alt="{{ work.title }}">
+    <span>{{ work.title }}</span>
+  </a>
+{% endfor %}

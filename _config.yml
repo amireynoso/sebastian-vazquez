@@ -29,7 +29,7 @@ collections:
     permalink: /:collection/:path/
 defaults:
   - scope:
-      path: "assets/images"
+      path: "assets/images/works"
     values:
       image: true
 
