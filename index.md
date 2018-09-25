@@ -7,7 +7,6 @@ order: 1
 
 <section class="intro-info">
   <img src="assets/images/sebastian-vazquez.jpg" alt="Sebastian Vazquez">
-  <a class="content-button" href="assets/docs/resume.pdf">Download my resume</a>
 </section>
 <section class="content-description">
   <h2 class="content-lead">Hi, I'm <strong>Sebastian</strong>.</h2>
